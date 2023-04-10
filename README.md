@@ -1,8 +1,10 @@
 # Gwent Data
 This project contains scripts that transforms the Gwent card data contained in xml files into a nice json format that you can use in your Gwent projects.
 
-# DEPRECATED
-This project is no longer actively maintained. I haven't played Gwent in a long time and have finally lost interest in maintaining my own personal Gwent project that uses gwent-data. Thank you for your support since the closed beta.
+# FORKED
+This project was forked from https://github.com/GwentCommunityDevelopers/gwent-data
+I have hacked it by removing card which have an '_' in their ID as they do not seem to be mapped at a certain point in the process,
+There were only a couple of these, as as of patch 11.3 this project managed to generate 942 cards in JSON data for me
 
 ## Usage
 1. Find and unzip "Path\to\Gwent\GWENT_Data\StreamingAssets\data_definitions". It's a zip file, even if your OS doesn't recognise it as such.

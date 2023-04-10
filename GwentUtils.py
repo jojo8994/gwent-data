@@ -50,6 +50,11 @@ def _is_token_valid(token, tooltips):
 def _get_evaluated_tooltips(raw_tooltips, card_names, card_abilities, card_templates):
     # Generate complete tooltips from the raw_tooltips and accompanying data.
     tooltips = {}
+    # Jordan's hack, remove all which have _ in keyname as it doesn't seem to exist in card_templates'
+    raw_tooltips = {k: v for k, v in raw_tooltips.items() if "_" not in k}
+
+    # print(raw_tooltips)
+    # print(card_templates)
     for card_id in raw_tooltips:
 
         # Some cards don't have info.
@@ -277,7 +282,10 @@ class GwentDataHelper:
 
         for ability in root.iter('Ability'):
             if ability.attrib['Type'] == "CardAbility":
-                card_id = ability.attrib['Template']
+                # Jordan's hack, get from 'Id' prop instead of Template prop as seems to no longer exist
+                # print(ability.attrib)
+                # card_id = ability.attrib['Template']
+                card_id = ability.attrib['Id']
                 abilities[card_id] = ability
 
         return abilities

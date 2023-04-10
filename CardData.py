@@ -67,6 +67,10 @@ CRIMSONCURSE_SET = 11
 NOVIGRAD_SET = 12
 IRON_JUDGEMENT_SET = 13
 MERCHANTS_OF_OFIR_SET = 14
+MASTER_MIRROR = 15
+PRICE_OF_POWER = 16
+WAY_OF_THE_WITCHER = 17
+BLACK_SUN = 18
 
 CARD_SETS = {
     TOKEN_SET: "NonOwnable",
@@ -78,6 +82,10 @@ CARD_SETS = {
     NOVIGRAD_SET: "Novigrad",
     IRON_JUDGEMENT_SET: "IronJudgement",
     MERCHANTS_OF_OFIR_SET: "MerchantsOfOfir",
+    MASTER_MIRROR: "MasterMirror",
+    PRICE_OF_POWER: "PriceOfPower",
+    WAY_OF_THE_WITCHER: "WayOfTheWitcher",
+    BLACK_SUN: "BlackSun",
 }
 
 # Gaunter's 'Higher than 5' and 'Lower than 5' are not actually cards.
